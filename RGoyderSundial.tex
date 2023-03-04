@@ -2,6 +2,7 @@
 
 \usepackage{iopams}
 \usepackage{graphicx}
+\usepackage{hyperref}
 
 \newcommand{\eg}{\emph{e.g.,}}
 \newcommand{\Order}{\ensuremath{\mathcal{O}}}
@@ -35,12 +36,16 @@
 
 \title{The sundial problem from a new angle}
 
-\author{R Goyder}
+\author{Russell Goyder}
 
 \ead{russell.goyder@gmail.com}
 \begin{abstract}
 I present the age-old mathematics of the sundial from a new perspective. Standard approaches consider the problem in the Earth frame and focus on spherical geometry. In this work, I apply a more physical approach, based on geometric algebra, to the generalized sundial problem of calculating the position of the tip of the shadow of a gnomon on a flat dial surface, both of which can have arbitrary orientation. This results in both an exact expression for the equation of time and formulae for the shadow tip which reduce to standard results for the special cases of common dial types.
 \end{abstract}
+
+\vfill
+
+Published in the (\href{https://iopscience.iop.org/article/10.1088/0143-0807/27/2/023}{European Journal of Physics in 2006}). Updated on \today.
 
 \maketitle
 
@@ -164,7 +169,7 @@ $m_1$ points in the direction of steepest ascent of the dial face, $m_2$ is hori
 We shall refer to the shadow-casting object as a gnomon although strictly a gnomon is vertical (parallel to $n_3$). Defining the rotors
 %
 \begin{eqnarray}
-R_\iota & = & \exp( - n_1 \wdg n_3 \half \iota ) \\ \nn
+R_\iota & = & \exp( - n_3 \wdg n_1 \half \iota ) \\ \nn
 R_\delta & = & \exp( - n_1 \wdg n_2 \half \delta )
 \end{eqnarray}
 %
@@ -591,9 +596,13 @@ It is unlikely that the general results presented here will be used to construct
 % ----------------------------------------------------------------- %
 \section{Personal note}
 %
-Toward the end of a visit to see my family in Canada last year, I was sitting with my 93 year-old grandfather in his garden before leaving for the airport at 5pm. I didn't want to be late but had left my watch inside -- I was about to get it to check the time when my grandfather told me not to worry; he had observed that the shadow cast by a fence post was parallel to the sides of the paving slabs of his patio at 5pm the previous day. As the shadow was falling about $15^\circ$ from that line, he said that at a rate of about $1^\circ$ every 4 minutes, I had about an hour left.
+Toward the end of a visit to see my family in Canada in the summer of 2005, I was sitting with my 93 year-old grandfather in his garden before leaving for the airport at 5pm. I didn't want to be late but had left my watch inside -- I was about to get it to check the time when my grandfather told me not to worry; he had observed that the shadow cast by a fence post was parallel to the sides of the paving slabs of his patio at 5pm the previous day. As the shadow was falling about $15^\circ$ from that line, he said that at a rate of about $1^\circ$ every 4 minutes, I had about an hour left.
 
 Inspired by this, I decided to calculate the angle between the paving slabs and fence shadow during my flight (ie the sundial problem), for some fun on the plane. On returning home, I checked my formulae against the standard results in the literature and was surprised to find that I had approached the problem in what seemed to be a different way, and obtained some more general results. For this initial inspiration, I am grateful to my grandfather, Claude Goyder.
+%
+\section*{Acknowledgements}
+%
+I am grateful to Hans Wilschut for finding several typos in the original version.
 %
 \clearpage
 %
