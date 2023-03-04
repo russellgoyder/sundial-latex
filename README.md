@@ -2,16 +2,15 @@
 
 ## LaTeX source
 
+To build, run `latexmk -pdf`. To clean up, `latexmk -C` and if you want, `find figs -name '*converted*' | xargs rm`.
+
 TODO:
 
 1. Update email address
-1. Build instructions: latexmk -pdf
-1. Run xfig and make sure I can still edit figures
-1. Corrections from Proof folder
+1. Corrections from list below
 1. LinkedIn typos from Hans.
 
-
-### Corrections from Proof folder
+### List of Corrections
 
 Page 1. At the end of the first paragraph of the introduction, there is "4 min" instead of "4 minutes". I assume you have changed this to conform with EJP guidelines, but to me seems a little abrupt in an introductory body of text!
 
