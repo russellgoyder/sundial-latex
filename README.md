@@ -2,27 +2,10 @@
 
 ## LaTeX source
 
-To build, run `latexmk -pdf`. To clean up, `latexmk -C` and if you want, `find figs -name '*converted*' | xargs rm`.
+To build, run `latexmk -pdf`. To clean up, `latexmk -C` and if you want, `find figs -name 'figure?.eps-converted-to.pdf' | xargs rm`.
 
 TODO:
 
-1. Corrections from list below
-1. LinkedIn typos from Hans.
-
-### List of Corrections
-
-Page 1. At the end of the first paragraph of the introduction, there is "4 min" instead of "4 minutes". I assume you have changed this to conform with EJP guidelines, but to me seems a little abrupt in an introductory body of text!
-
-Page 2 line 3. 'equation of time' has already been put in quotes, so there is no need for quotes here.
-
-Page 2. The last sentence of the introduction reads "for which full details can be found" but I think it should read "of which full details can be found".
-
-Page 2, the footnote. As it stands, the link is broken. "pagesintroduction.html" should be "pages/introduction.htm".
-
-Page 7, just before equation 29, "shadow bearing" should be "shadow angle".
-
-Page 8, first paragraph of section 5. "gnomon orientation" should be "gnomon's orientation".
-
-Page 13, just before equation 54, there are two "we have"s very close together. I'd like to delete the first one, to leave "For the case considered by Rohr, iota = pi/2 - thetaL and we have".
-
-Page 13 Equation 57. "dec" in tan dec should be a calligraphic D, the declination, defined in equation 55.
+1. Figure 3: m_1 and m_3 should be switched
+1. The sign in Rι of Eq.11 must be wrong (or n1 ∧ n3 should be n3 ∧ n1); then it gives Eq.12, otherwise Eq.12 would have to look the same as the m3 equation in Eq.10 (but there is a sign difference).
+1. Published in 2006 updated blah.

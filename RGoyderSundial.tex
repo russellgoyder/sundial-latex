@@ -49,13 +49,13 @@ I present the age-old mathematics of the sundial from a new perspective. Standar
 %
 Sundials are among the most ancient of mankind's inventions and the mathematics that describes them has been well understood for many centuries. A sundial consists of a shadow-casting object, called a gnomon\footnote{Traditionally, the word gnomon has been used to describe a vertical shadow-casting object but here we use it for one of arbitrary orientation.}, and a dial face displaying lines parallel to the shadow at different times of day. The problem considered here is to calculate the location of those lines. The common approach to solving this problem works relative to a frame fixed with respect to the Earth and the sun's apparent motion is parametrized via its hour angle which is zero at noon and increases by approximately $1^\circ$ every four minutes.
 
-This has the advantage of decoupling the issue of dial geometry from the orbital dynamics of the Earth and sun; it removes the physics of orbits from the problem and reduces it to one of mathematics only. The physics is a part of the problem however, embodied in the `equation of time' and a full treatment must include it. Normally, it is presented somewhat separately (if at all), set apart from the geometry as viewed in the Earth's frame of reference.
+This has the advantage of decoupling the issue of dial geometry from the orbital dynamics of the Earth and sun; it removes the physics of orbits from the problem and reduces it to one of mathematics only. The physics is a part of the problem however, embodied in the ``equation of time'' and a full treatment must include it. Normally, it is presented somewhat separately (if at all), set apart from the geometry as viewed in the Earth's frame of reference.
 
-In this paper, I apply a different approach to the calculation; one where both the orbital dynamics and the geometry of the dial are included in a single framework, based on the rest frame of the fixed stars. This yields expressions for both the ``equation of time'' and the coordinates of the tip of the shadow as it moves across the face of the sundial. I consider a geometry that is more general than that commonly considered in the literature; one where the orientation of both the gnomon and the dial face can be arbitrary.
+In this paper, I apply a different approach to the calculation; one where both the orbital dynamics and the geometry of the dial are included in a single framework, based on the rest frame of the fixed stars. This yields expressions for both the equation of time and the coordinates of the tip of the shadow as it moves across the face of the sundial. I consider a geometry that is more general than that commonly considered in the literature; one where the orientation of both the gnomon and the dial face can be arbitrary.
 
-This more general approach is facilitated by neat handling of rotations and other geometric operations afforded by geometric algebra. In fact, I was not aware that it was more general when first applying it; it was simply a natural way to tackle the problem, given the tools of geometric algebra. An introduction to these techniques is beyond the scope of this work. There are many excellent tutorials available\footnote{I would recommend starting here: {\tt http://www.mrao.cam.ac.uk/\~{}clifford/pages/introduction.htm}}, such as \cite{inanr}, \cite{umlfpae} and \cite{GAbook}. This problem forms an instructive example of the application of rotors in particular, and of some simple techniques in geometric algebra in general.
+This more general approach is facilitated by neat handling of rotations and other geometric operations afforded by geometric algebra. In fact, I was not aware that it was more general when first applying it; it was simply a natural way to tackle the problem, given the tools of geometric algebra. An introduction to these techniques is beyond the scope of this work. There are many excellent tutorials available\footnote{I would recommend starting here: {\tt http://geometry.mrao.cam.ac.uk/home/introduction-to-ga/}}, such as \cite{inanr}, \cite{umlfpae} and \cite{GAbook}. This problem forms an instructive example of the application of rotors in particular, and of some simple techniques in geometric algebra in general.
 
-We start in Section~\ref{secDefinitions} by defining some orthonormal frames, planes and other vectors which specify the geometry of the dial, its location on the Earth and the position of the Earth relative to the sun. We then write down the solution to the sundial problem in general terms in Section~\ref{mainCalc}. In Section~\ref{specCalc} we specialize to the case of a gnomon in the meridian plane and derive explicit forms of the general results of Section~\ref{mainCalc}, including an exact expression for the equation of time which is shown in Section~\ref{eot}. In Section~\ref{secPaths} we graph some example paths followed by the shadow tip as it moves across the dial face and Section~\ref{secComparison} contains a comparison of the results found in this work with standard formulae in the literature. Finally, we conclude in Section~\ref{secConclusion} and \ref{kepler} contains details of the novel approach taken to the Kepler problem, based on spinors and for which full details can be found in \cite{GAbook}.
+We start in Section~\ref{secDefinitions} by defining some orthonormal frames, planes and other vectors which specify the geometry of the dial, its location on the Earth and the position of the Earth relative to the sun. We then write down the solution to the sundial problem in general terms in Section~\ref{mainCalc}. In Section~\ref{specCalc} we specialize to the case of a gnomon in the meridian plane and derive explicit forms of the general results of Section~\ref{mainCalc}, including an exact expression for the equation of time which is shown in Section~\ref{eot}. In Section~\ref{secPaths} we graph some example paths followed by the shadow tip as it moves across the dial face and Section~\ref{secComparison} contains a comparison of the results found in this work with standard formulae in the literature. Finally, we conclude in Section~\ref{secConclusion} and \ref{kepler} contains details of the novel approach taken to the Kepler problem, based on spinors and of which full details can be found in \cite{GAbook}.
 %
 % ----------------------------------------------------------------- %
 \section{Definitions} \label{secDefinitions}
@@ -159,7 +159,7 @@ m_2 & = & -\sin d \,n_1 + \cos d \,n_2\\ \nn
 m_3 & = & -\sin i (\cos d \, n_1 + \sin d \, n_2) + \cos i \, n_3
 \end{eqnarray}
 %
-$m_1$ points in the direction of steepest descent of the dial face, $m_2$ is horizontal (parallel to $n_1 \wdg n_2$), $m_3$ is normal to the face and  $m_1 \wdg m_2$ is just $G$. This can be seen in Figure~\ref{dialGeom} which shows the dial face as a dashed square outline.
+$m_1$ points in the direction of steepest ascent of the dial face, $m_2$ is horizontal (parallel to $n_1 \wdg n_2$), $m_3$ is normal to the face and  $m_1 \wdg m_2$ is just $G$. This can be seen in Figure~\ref{dialGeom} which shows the dial face as a dashed square outline.
 %
 We shall refer to the shadow-casting object as a gnomon although strictly a gnomon is vertical (parallel to $n_3$). Defining the rotors
 %
@@ -197,7 +197,7 @@ g = -\sin\iota(\cos\delta \, n_1 - \sin\delta \, n_2) +  \cos\iota \, n_3.
 %
 We can now solve the general sundial problem; given a gnomon with arbitrary orientation, casting a shadow onto a plane, the dial face, also of arbitrary orientation, where does the tip of the shadow lie in relation to the intersection of the gnomon and the dial face?
 
-Lines on a sundial are typically constructed relative to the shadow at noon (the ``noon line''). Noon occurs when the sun passes through the meridian plane $M=n_1 \wdg n_2$. 
+Lines on a sundial are typically constructed relative to the shadow at noon (the ``noon line''). Noon occurs when the sun passes through the meridian plane $M=n_1 \wdg n_3$. 
 Equivalently, we have the condition that $s$ lies in $M$
 %
 \begin{equation}
@@ -305,7 +305,7 @@ where
 \upsilon(i,d) = (\cos^2 i + \sin^2 i\cos^2 d)^{1/2}.
 \end{equation}
 %
-In the above, all of the dependence on $\sigma$, $\psi$ and $\alpha$, the physical parameters of the Earth's orbit is contained within $\mu$ and we have have formulae which relate $\mu$ to the geometry we have chosen for the sundial ($i$, $d$ and $\iota$). Our expression for the shadow bearing (\ref{shadBearing}) then yields
+In the above, all of the dependence on $\sigma$, $\psi$ and $\alpha$, the physical parameters of the Earth's orbit is contained within $\mu$ and we have have formulae which relate $\mu$ to the geometry we have chosen for the sundial ($i$, $d$ and $\iota$). Our expression for the shadow angle (\ref{shadBearing}) then yields
 %
 \begin{equation} \label{tanzeta}
 \tan\zeta = \frac{\tan\mu(\sin\iota\sin i \cos d + \cos\iota\cos i)}
@@ -367,7 +367,7 @@ It can be verified that squaring and adding Equations~\ref{sinbeta} and \ref{cos
 % ----------------------------------------------------------------- %
 \section{The equation of time} \label{eot}
 %
-We have in (\ref{shadTipCartCoords}) (or equivalently Equations~(\ref{tanzeta}) and (\ref{L})) a description of the path of the tip of the shadow as a function of fixed parameters which encode the dial's geometry and the angle $\mu$ which varies with time. $\mu$ is given by (\ref{hourAngle}) as a function of fixed parameters encoding the Earth's orientation, dial's latitude and gnomon orientation, and the two angles $\sigma$ and $\psi$ which change with time. It is to this time-dependence we now turn. If we restrict to the special case where the gnomon is a style ($\iota = \theta$), $\mu$ becomes the hour angle of the sun
+We have in (\ref{shadTipCartCoords}) (or equivalently Equations~(\ref{tanzeta}) and (\ref{L})) a description of the path of the tip of the shadow as a function of fixed parameters which encode the dial's geometry and the angle $\mu$ which varies with time. $\mu$ is given by (\ref{hourAngle}) as a function of fixed parameters encoding the Earth's orientation, dial's latitude and gnomon's orientation, and the two angles $\sigma$ and $\psi$ which change with time. It is to this time-dependence we now turn. If we restrict to the special case where the gnomon is a style ($\iota = \theta$), $\mu$ becomes the hour angle of the sun
 %
 \begin{equation} \label{trueHourAngle}
 \tan\mu = \frac{\tan\sigma - \tan\psi\cos\alpha}{\tan\sigma\tan\psi + \cos\alpha}
@@ -406,7 +406,7 @@ where
 %
 Given the above, (\ref{trueHourAngle}) gives the hour angle of the sun as a function of time. This hour angle is zero at solar noon, but this does not correspond to 12 o'clock as read on mechanical clocks. The latter time is called mean time and increases linearly with absolute, Newtonian time. Solar time is sometimes called true time, but I find this misleading as mean time is much closer to what we mean by ``time''. Solar time varies according to (\ref{trueHourAngle}), as the angle between $s$ and the Earth's axis ($f_3$) changes and as the angular speed of the Earth changes throughout its orbit.
 
-The difference between solar time and mean time is called ``the equation of time'' which we shall denote by $\Delta\mu$. To calculate it, we first need an expression for the hour angle of the mean sun. This is the sun as observed on an Earth whose axis is not tilted ($\alpha = 0$) and whose orbit is circular with period $T_y$. In this scenario, we have
+The difference between solar time and mean time is called the equation of time which we shall denote by $\Delta\mu$. To calculate it, we first need an expression for the hour angle of the mean sun. This is the sun as observed on an Earth whose axis is not tilted ($\alpha = 0$) and whose orbit is circular with period $T_y$. In this scenario, we have
 %
 \begin{equation} \label{meanHourAngle}
 \mu_m = \psi + \pi - \sigma.
@@ -436,7 +436,7 @@ Figure~\ref{EOT} shows $\Delta_\mu = \mu - \mu_m$ as given by Equations~\ref{tru
 \begin{figure}[ht!]
 \centering
 \includegraphics[width=14cm]{figs/figure6.eps}
-\caption{The Equation of time -- the difference between time as reckoned by the observed hour angle of the sun and the hour angle of an imaginary mean sun. The latter time is ``true'', absolute Newtonian time, the time told by mechanical clocks.\label{EOT}}
+\caption{The equation of time -- the difference between time as reckoned by the observed hour angle of the sun and the hour angle of an imaginary mean sun. The latter time is ``true'', absolute Newtonian time, the time told by mechanical clocks.\label{EOT}}
 \end{figure}
 %
 % ----------------------------------------------------------------- %
@@ -512,7 +512,7 @@ which yields
 \tan B = \frac{\sin i\sin d \left( \tan i\tan\iota\cos d + 1 \right)}{\tan i\cos d - \tan\iota}
 \end{equation}
 %
-For the case considered by Rohr, we have $\iota = \pi/2 - \theta_L$ and we have
+For the case considered by Rohr, $\iota = \pi/2 - \theta_L$ and we have
 %
 \begin{equation}
 \tan B = \frac{\sin i\sin d \left( \tan i\cos d + \tan\theta_L \right)}{\tan i\cos d\tan\theta_L - 1}
@@ -546,7 +546,7 @@ If we instead set both $i$ and $d$ to zero we have a horizontal dial face (tange
 and the length of the shadow cast by a gnomon of unit length is given by
 %
 \begin{equation}
-L = \frac{\cos\mu}{D_h\tan\mathrm{dec}}\sqrt{1 + \tan^2\mu\cos^2\theta}
+L = \frac{\cos\mu}{D_h\tan\mathcal{D}}\sqrt{1 + \tan^2\mu\cos^2\theta}
 \end{equation}
 %
 where $D_h$ is given by (\ref{D_h}).
@@ -624,7 +624,7 @@ r = UU^\dag
 gives an equation of motion for $U$
 %
 \begin{equation} \label{Udotdot}
-\frac{d^2U}{ds^2} = \left(-\frac{kx}{\mu r^2} + \frac{\dot{x}^2}{2} \right) U = -\om^2 U
+\frac{d^2U}{d\tau^2} = \left(-\frac{kx}{\mu r^2} + \frac{\dot{x}^2}{2} \right) U = -\om^2 U
 \end{equation}
 %
 where
