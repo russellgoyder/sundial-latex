@@ -6,7 +6,6 @@ To build, run `latexmk -pdf`. To clean up, `latexmk -C` and if you want, `find f
 
 TODO:
 
-1. Update email address
 1. Corrections from list below
 1. LinkedIn typos from Hans.
 
