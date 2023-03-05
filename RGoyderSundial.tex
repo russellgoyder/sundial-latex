@@ -1,6 +1,5 @@
-\documentclass[12pt]{iopart}
+\documentclass[12pt]{article}
 
-\usepackage{iopams}
 \usepackage{graphicx}
 \usepackage{hyperref}
 
@@ -35,19 +34,13 @@
 \begin{document}
 
 \title{The sundial problem from a new angle}
-
-\author{Russell Goyder}
-
-\ead{russell.goyder@gmail.com}
-\begin{abstract}
-I present the age-old mathematics of the sundial from a new perspective. Standard approaches consider the problem in the Earth frame and focus on spherical geometry. In this work, I apply a more physical approach, based on geometric algebra, to the generalized sundial problem of calculating the position of the tip of the shadow of a gnomon on a flat dial surface, both of which can have arbitrary orientation. This results in both an exact expression for the equation of time and formulae for the shadow tip which reduce to standard results for the special cases of common dial types.
-\end{abstract}
-
-\vfill
-
-Published in the (\href{https://iopscience.iop.org/article/10.1088/0143-0807/27/2/023}{European Journal of Physics in 2006}). Updated on \today.
-
+\author{Russell Goyder\footnote{Email: \texttt{russell.goyder@gmail.com}}}
+\date{4 March 2023\footnote{Originally published in the \href{https://iopscience.iop.org/article/10.1088/0143-0807/27/2/023}{European Journal of Physics in 2006}}}
 \maketitle
+
+\begin{abstract}
+  I present the age-old mathematics of the sundial from a new perspective. Standard approaches consider the problem in the Earth frame and focus on spherical geometry. In this work, I apply a more physical approach, based on geometric algebra, to the generalized sundial problem of calculating the position of the tip of the shadow of a gnomon on a flat dial surface, both of which can have arbitrary orientation. This results in both an exact expression for the equation of time and formulae for the shadow tip which reduce to standard results for the special cases of common dial types.
+\end{abstract}
 
 % ----------------------------------------------------------------- %
 \section{Introduction}
@@ -58,7 +51,7 @@ This has the advantage of decoupling the issue of dial geometry from the orbital
 
 In this paper, I apply a different approach to the calculation; one where both the orbital dynamics and the geometry of the dial are included in a single framework, based on the rest frame of the fixed stars. This yields expressions for both the equation of time and the coordinates of the tip of the shadow as it moves across the face of the sundial. I consider a geometry that is more general than that commonly considered in the literature; one where the orientation of both the gnomon and the dial face can be arbitrary.
 
-This more general approach is facilitated by neat handling of rotations and other geometric operations afforded by geometric algebra. In fact, I was not aware that it was more general when first applying it; it was simply a natural way to tackle the problem, given the tools of geometric algebra. An introduction to these techniques is beyond the scope of this work. There are many excellent tutorials available\footnote{I would recommend starting here: {\tt http://geometry.mrao.cam.ac.uk/home/introduction-to-ga/}}, such as \cite{inanr}, \cite{umlfpae} and \cite{GAbook}. This problem forms an instructive example of the application of rotors in particular, and of some simple techniques in geometric algebra in general.
+This more general approach is facilitated by neat handling of rotations and other geometric operations afforded by geometric algebra. In fact, I was not aware that it was more general when first applying it; it was simply a natural way to tackle the problem, given the tools of geometric algebra. An introduction to these techniques is beyond the scope of this work. There are many excellent tutorials available\footnote{I would recommend starting at \href{http://geometry.mrao.cam.ac.uk/home/introduction-to-ga/}{http://geometry.mrao.cam.ac.uk}.}, such as \cite{inanr}, \cite{umlfpae} and \cite{GAbook}. This problem forms an instructive example of the application of rotors in particular, and of some simple techniques in geometric algebra in general.
 
 We start in Section~\ref{secDefinitions} by defining some orthonormal frames, planes and other vectors which specify the geometry of the dial, its location on the Earth and the position of the Earth relative to the sun. We then write down the solution to the sundial problem in general terms in Section~\ref{mainCalc}. In Section~\ref{specCalc} we specialize to the case of a gnomon in the meridian plane and derive explicit forms of the general results of Section~\ref{mainCalc}, including an exact expression for the equation of time which is shown in Section~\ref{eot}. In Section~\ref{secPaths} we graph some example paths followed by the shadow tip as it moves across the dial face and Section~\ref{secComparison} contains a comparison of the results found in this work with standard formulae in the literature. Finally, we conclude in Section~\ref{secConclusion} and \ref{kepler} contains details of the novel approach taken to the Kepler problem, based on spinors and of which full details can be found in \cite{GAbook}.
 %
@@ -71,8 +64,7 @@ We begin with an orthonormal frame fixed relative to the the``fixed stars'' $\{e
 %
 \begin{figure}[ht!]
 \centering
-\includegraphics[width=14cm]{figs/figure1.eps} 
-%\includegraphics{figs/figure1.eps} 
+\includegraphics[width=13cm]{figs/figure1.eps} 
 \caption{The Earth's orbit around the sun and orientation of its axis of rotation. The orbit lies in the $e_1 \wdg e_2$ plane and the Earth's axis is $f_3$. The equinoxes and solstices lie on the points of intersection of the ellipse and the $\{e_i\}$ frame. Note that the axes of the ellipse are not aligned with $e_1$ and $e_2$ but differ by an angle $\rho$ which for the Earth is about $12.25^\circ$ and that the eccentricity of the Earth's orbit is greatly exaggerated.\label{universe_frame}}
 \end{figure}
 %
@@ -183,14 +175,14 @@ g = -\sin\iota(\cos\delta \, n_1 - \sin\delta \, n_2) +  \cos\iota \, n_3.
   \hfill
   \begin{minipage}[t]{.45\textwidth}
     \begin{center}  
-	\includegraphics[width=7cm]{figs/figure3.eps}
+	\includegraphics[width=6cm]{figs/figure3.eps}
       \caption{The dial face.\label{dialGeom}}
     \end{center}
   \end{minipage}
   \hfill
   \begin{minipage}[t]{.45\textwidth}
     \begin{center}  
-      \includegraphics[width=7cm]{figs/figure4.eps}
+      \includegraphics[width=6cm]{figs/figure4.eps}
       \caption{The gnomon.\label{gnomonGeom}}
     \end{center}
   \end{minipage}
@@ -436,11 +428,11 @@ Mean noon occurs when this angle is equal to $2\pi n$ where $n=0,1,2..$. This oc
 t_{mn} = t_p + n T_d.
 \end{equation}
 %
-Figure~\ref{EOT} shows $\Delta_\mu = \mu - \mu_m$ as given by Equations~\ref{trueHourAngle} and \ref{meanHourAngle}. It also shows the two separate effects contributing to $\Delta_\mu$; non-zero $\alpha$ and the non-constant angular speed of a Keplerian orbit. The result for $\Delta_\mu$ in this section is exact and requires a numerical root-finding calculation to find $\tau(t)$ from (\ref{keplerCoords}). However, the fact that $\Delta_\mu$ is composed of the sum of two functions with a high degree of periodicity means that a Fourier series with just two terms provides a very good approximation. Such an expansion is derived in \cite{mueller}\footnote{Also available online at {\tt http://info.ifpan.edu.pl/firststep/aw-works/fsII/mul/mueller.html}}.
+Figure~\ref{EOT} shows $\Delta_\mu = \mu - \mu_m$ as given by Equations~\ref{trueHourAngle} and \ref{meanHourAngle}. It also shows the two separate effects contributing to $\Delta_\mu$; non-zero $\alpha$ and the non-constant angular speed of a Keplerian orbit. The result for $\Delta_\mu$ in this section is exact and requires a numerical root-finding calculation to find $\tau(t)$ from (\ref{keplerCoords}). However, the fact that $\Delta_\mu$ is composed of the sum of two functions with a high degree of periodicity means that a Fourier series with just two terms provides a very good approximation. Such an expansion is derived in \cite{mueller}\footnote{Also available online at\\ {\tt http://info.ifpan.edu.pl/firststep/aw-works/fsII/mul/mueller.html}}.
 %
 \begin{figure}[ht!]
 \centering
-\includegraphics[width=14cm]{figs/figure6.eps}
+\includegraphics[width=13cm]{figs/figure6.eps}
 \caption{The equation of time -- the difference between time as reckoned by the observed hour angle of the sun and the hour angle of an imaginary mean sun. The latter time is ``true'', absolute Newtonian time, the time told by mechanical clocks.\label{EOT}}
 \end{figure}
 %
@@ -451,7 +443,7 @@ The results of Section~\ref{eot} have provided us with a means of plotting the s
 %
 \begin{figure}[ht!]
 \centering
-\includegraphics[width=14cm]{figs/figure7.eps}
+\includegraphics[width=13cm]{figs/figure7.eps}
 \caption{The path of the tip of a style's shadow on a horizontal dial face, located at the latitude of Cambridge, England at different times of day and times of year. The characteristic double loop of the analemma is visible at each hour (12 o'clock is marked by a small square). Different times of year are shown with different line styles. The style is of unit length and its base is shown as a small circle. Also shown is the path of the shadow tip on four important days of the year; the equinoxes and solstices. The two paths at the equinoxes coincide while those at the solstices mark the upper and lower limits of the shadow.\label{horizDial}}
 \end{figure}
 %
@@ -461,7 +453,7 @@ We are of course free to choose an arbitrary dial geometry. Figure~\ref{arbDial}
 %
 \begin{figure}[ht!]
 \centering
-\includegraphics[width=14cm]{figs/figure8.eps} 
+\includegraphics[width=13cm]{figs/figure8.eps} 
 \caption{Paths of the shadow tip for a dial near the equator in the Southern hemisphere (latitude $10^\circ$ South) with an unusual geometry; inclination $i = 15^\circ$, declination $d = 20^\circ$ and gnomon angle $\iota = 20^\circ$.\label{arbDial}}
 \end{figure}
 %
@@ -483,7 +475,7 @@ To calculate the hours at which the analemma is first and last visible on a dial
 %
 \begin{figure}[ht!]
 \centering
-\includegraphics[width=14cm]{figs/figure9.eps} 
+\includegraphics[width=13cm]{figs/figure9.eps} 
 \caption{Paths of the shadow tip for a dial in the arctic (latitude $80^\circ$ North) and with a declination of $d = 30^\circ$. The gnomon here is a true gnomon, being vertical, with $\iota = 0^\circ$.\label{articDial}}
 \end{figure}
 %
@@ -526,7 +518,7 @@ For the case considered by Rohr, $\iota = \pi/2 - \theta_L$ and we have
 which agrees with Rohr.
 %
 % ----------------------------------------------------------------- %
-\subsubsection{Common types of sundial} \label{secCommonTypes}
+\subsection{Common types of sundial} \label{secCommonTypes}
 %
 We now focus attention of a selection of special cases of the formulae given in Section~\ref{mainCalc} which corresponds to common types of sundial and show that the results agree with standard formulae.
 %
@@ -696,8 +688,6 @@ l & = & \frac{(A^2-B^2)^2}{A^2+B^2}
 \end{eqnarray}
 %
 % ----------------------------------------------------------------- %
-\section*{References}
-%
 \begin{thebibliography}{10}
 %
 \bibitem[Doran and Lasenby 2003]{GAbook}
