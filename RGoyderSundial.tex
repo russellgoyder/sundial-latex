@@ -145,7 +145,7 @@ so that the dial face $G$ is given by
 %
 \begin{eqnarray}
 G & = & R_d R_i \, n_1 \wdg n_2 \, \tilde{R}_i \tilde{R}_d \\ \nn
-  & = & \cos i \; n_1 \wdg n_2 - \sin i ( \cos d \; n_2 \wdg n_3 + \sin d \; n_3 \wdg n_1 )
+  & = & \cos i \; n_1 \wdg n_2 - \sin i ( \cos d \; n_2 \wdg n_3 - \sin d \; n_1 \wdg n_3 )
 \end{eqnarray}
 %
 It will be useful to perform projections onto a frame aligned with the dial face. We can define such a frame by applying the rotors in (\ref{dialFaceRotors}) to the Earth surface frame in (\ref{nFrame}) to give
@@ -161,14 +161,14 @@ $m_1$ points in the direction of steepest ascent of the dial face, $m_2$ is hori
 We shall refer to the shadow-casting object as a gnomon although strictly a gnomon is vertical (parallel to $n_3$). Defining the rotors
 %
 \begin{eqnarray}
-R_\iota & = & \exp( - n_3 \wdg n_1 \half \iota ) \\ \nn
+R_\iota & = & \exp( - n_1 \wdg n_3 \half \iota ) \\ \nn
 R_\delta & = & \exp( - n_1 \wdg n_2 \half \delta )
 \end{eqnarray}
 %
 we have a gnomon which can point in an arbitrary direction and whose orientation is displayed in Figure~\ref{gnomonGeom}.
 %
 \begin{equation}\label{gnomon}
-g = -\sin\iota(\cos\delta \, n_1 - \sin\delta \, n_2) +  \cos\iota \, n_3.
+g = -\sin\iota(\cos\delta \, n_1 + \sin\delta \, n_2) +  \cos\iota \, n_3.
 \end{equation}
 %
 \begin{figure}[ht!]
