@@ -1,7 +1,4 @@
-# The sundial problem from a new angle
-
 Latest version of a paper [originally published](https://iopscience.iop.org/article/10.1088/0143-0807/27/2/023) in the [European Journal of Physics](https://iopscience.iop.org/journal/0143-0807) in 2006.
-
 
 <p float="left">
   <img src="figs/MainArena.png" height="250" />
