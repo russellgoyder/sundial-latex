@@ -4,8 +4,8 @@ Latest version of a paper [originally published](https://iopscience.iop.org/arti
 
 
 <p float="left">
-  <img src="figs/MainArena.png" height="300" />
-  <img src="figs/ArbitraryDial.png" height="300" /> 
+  <img src="figs/MainArena.png" height="250" />
+  <img src="figs/ArbitraryDial.png" height="250" /> 
 </p>
 
 Download PDF: [The sundial problem from a new angle - Russell Goyder.pdf](<The sundial problem from a new angle - Russell Goyder.pdf>)
