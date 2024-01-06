@@ -224,7 +224,7 @@ The magnitude of $u$ is $\sin \Psi$ where $\Psi$ is the angle between the planes
 a unit vector parallel to the shadow. Substituting (\ref{noonCond}) into (\ref{shadVec}) gives us the noon line $\what_{noon}$. We can now compute the angle $\zeta$ between the shadow vector and the noon line
 %
 \begin{equation} \label{shadBearing}
-\cos\zeta = w \dt w_{noon}.
+\cos\zeta = \what \dt \what_{noon}.
 \end{equation}
 %
 We have the azimuthal coordinate of the tip of the shadow in the dial face (relative to the noon line). To obtain the radial coordinate we can construct the vector
@@ -262,34 +262,46 @@ g = \cos\iota \, n_3 - \sin\iota \, n_1.
 %
 This leaves enough generality to cover the common types of sundial. In particular, we have a style (gnomon parallel to the Earth's axis) when $\iota = \theta$ and a vertical gnomon when $\iota = 0$. It is useful to define a generalized solar hour angle as the angle between $S$ and $M$ given by
 %
-\begin{equation}
-\cos\mu = S \dt M
+\begin{equation} \label{cosmu}
+\cos\mu = \frac{-S\cdot M}{\sqrt{-S^2}\sqrt{-M^2}} = \frac{-S\cdot M}{\sin(\Xi)}
 \end{equation}
 %
-which evaluates to
+where $M^2 = -1$ and $\Xi$, the angle between the direction of sun rays $s$ and the gnomon $g$, is given by
+%
+\begin{eqnarray}
+\cos\Xi & = s\cdot g = & -\cos\sigma(\sin\alpha\cos(\iota-\theta) + \cos\psi\cos\alpha\sin(\iota-\theta)) \\ \nn
+        && - \sin\sigma\sin\psi\sin(\iota-\theta)
+\end{eqnarray}
+%
+This gives the magnitude of the bivector $S$ via $S^2 = (s\cdot g)^2 - s^2 g^2 = -\sin^2\Xi$. Evaluating (\ref{cosmu}) gives
+\begin{equation}
+  \cos\mu = \frac{(\sin\psi\sin\sigma+\cos\alpha\cos\psi\cos\sigma)\cos(\iota-\theta)-\sin\alpha\cos\sigma\sin(\iota-\theta)}{\sin\Xi}
+\end{equation}  
+%
+and so
 %
 \begin{equation} \label{hourAngle}
-\tan\mu = \frac{\cos\psi\tan\sigma-\sin\psi\cos\alpha}{( \tan\sigma\sin\psi+\cos\psi\cos\alpha )\cos(\theta-\iota) + \sin\alpha\sin(\theta-\iota) }
+\tan\mu = \frac{\sin\psi\cos\alpha-\cos\psi\tan\sigma}{( \sin\psi\tan\sigma+\cos\psi\cos\alpha )\cos(\iota-\theta) - \sin\alpha\sin(\iota-\theta) }
 \end{equation}
 %
 In terms of this angle, we can express $S$ in the following simple form
 %
 \begin{equation} \label{SBetter}
-S = \sin\mu( \sin\iota \, n_1 \wdg n_2 + \cos\iota \, n_2 \wdg n_3 ) + \cos\mu \, n_1 \wdg n_3
+S = -\sin\Xi ( \sin\mu( \sin\iota \, n_1 \wdg n_2 + \cos\iota \, n_2 \wdg n_3 ) - \cos\mu \, n_1 \wdg n_3 )
 \end{equation}
 %
 which, when substituted into (\ref{shadVec1}) gives
 %
 \begin{eqnarray} \label{shadBetter}
-u & = & \phantom{-}( \sin\iota\sin d \sin i sin\mu - \cos i \cos\mu ) \; n_1 \\ \nn
-& & - \sin\mu ( \sin\iota\sin i \cos d + cos\iota\cos i) \; n_2 \\ \nn
-& & - \sin i (\cos\iota\sin d \sin\mu + \cos d\cos\mu) \; n_3.
+\frac{u}{\sin\Xi} & = & \phantom{-}( \sin\iota\sin d \sin i \sin\mu + \cos i \cos\mu ) \; n_1 \\ \nn
+& & - \sin\mu ( \sin\iota\sin i \cos d + \cos\iota\cos i) \; n_2 \\ \nn
+& & - \sin i (\cos\iota\sin d \sin\mu - \cos d\cos\mu) \; n_3.
 \end{eqnarray}
 %
 Taking the inner product of this vector with itself yields $\Psi$ where
 %
 \begin{equation}
-\cos\Psi = \sin\mu (\sin i\sin\iota\cos d - \cos i\sin\iota) - \cos\mu \sin i\sin d
+\cos\Psi = \sin\mu (\cos i\sin\iota - \sin i\sin\iota\cos d) - \cos\mu \sin i\sin d
 \end{equation}
 %
 which in turn allows us to construct $\what$ via (\ref{shadVec}). To evaluate $\what$ at noon we impose the condition in (\ref{noonCond}) which amounts to setting $\mu = 0$. This yields
@@ -320,17 +332,11 @@ This expression gives the angular coordinate of the tip of the shadow on the fac
 where
 %
 \begin{eqnarray} \label{D}
-D 	& = & \sin i \left( \sin d\sin\Xi_s\sin\mu_s + \cos d\left[\cos\theta\sin\Xi_s\cos\mu_s - \sin\theta\cos\Xi_s\right] \right ) \\ \nn
-	&   & - \cos i \left( \cos\theta\cos\Xi_s + \sin\theta\sin\Xi_s\cos\mu_s \right),
+D & = & (\sin i \cos d \cos\theta-\sin\theta\cos i)\cos\mu_s-\sin\mu_s \sin d\sin i)\sin\Xi \\ \nn
+  &   & +(\sin i\sin\theta\cos d+\cos i\cos\theta)\sin\alpha\cos\sigma
 \end{eqnarray}
 %
-$\Xi$ is the angle between $s$ and $g$ (in $S$) and where the subscript $s$ indicates an evaluation subject to the condition $\iota = \theta$ such that $g$ is a style. $\Xi$ is given by $s\dt g$
-%
-\begin{equation}
-\cos\Xi = \sin(\theta-\iota)[\sin\psi\sin\sigma + \cos\psi\cos\sigma\cos\alpha] - \cos(\theta-\iota)\cos\sigma\sin\alpha
-\end{equation}
-%
-We can now substitute for $\lambda$ in (\ref{shadRadialCoordCond}) to get the shadow vector $w$ which has magnitude
+and $\mu_s$ is the hour angle from \ref{hourAngle} subject to the condition $\iota = \theta$ such that $g$ is a style. We can now substitute for $\lambda$ in (\ref{shadRadialCoordCond}) to get the shadow vector $w$ which has magnitude
 %
 \begin{equation} \label{L}
 L = \frac{\sin\Xi\sin\Psi}{D}.
@@ -339,8 +345,8 @@ L = \frac{\sin\Xi\sin\Psi}{D}.
 Projecting $w$ onto the frame of (\ref{mFrame}) (as in (\ref{cartCoordsShad})) gives the Cartesian coordinates of the tip of the shadow
 %
 \begin{eqnarray} \label{shadTipCartCoords}
-\frac{x}{L} & = & \frac{1}{\sin\Psi} (\sin\mu\cos\iota\sin d + \cos\mu\cos d)\\ \nn
-\frac{y}{L} & = & \frac{1}{\sin\Psi} (\sin\mu[\sin\iota\sin i + \cos\iota\cos i\cos d] - \cos\mu\cos i\sin d)\\ \nn
+\frac{x}{L} & = &  \frac{1}{\sin\Psi} (\cos\mu\cos d - \sin\mu\cos\iota\sin d)\\ \nn
+\frac{y}{L} & = & \frac{-1}{\sin\Psi} (\sin\mu[\sin\iota\sin i + \cos\iota\cos i\cos d] + \cos\mu\cos i\sin d)\\ \nn
 \frac{z}{L} & = & 0.
 \end{eqnarray}
 %
@@ -360,7 +366,7 @@ It can be verified that squaring and adding Equations~\ref{sinbeta} and \ref{cos
 %
 \begin{equation} \label{tanbeta}
 \tan\beta = \frac{\sin\iota\sin i\cos d + \cos\iota\cos i}
-{\sin\mu \sin d \sin i + \cos\mu( \cos\iota\sin i\cos d - \sin\iota\cos i )}.
+{\cos\mu( \cos\iota\sin i\cos d - \sin\iota\cos i ) - \sin\mu \sin d \sin i}.
 \end{equation}
 %
 % ----------------------------------------------------------------- %
@@ -379,7 +385,7 @@ which, if we reduce the tilt of the Earth's axis $\alpha$ to zero, gives $\mu = 
 t(\tau) & = & a\left(\tau + \frac{e}{\omega}\sin \om \tau\right).
 \end{eqnarray}
 %
-where $\omega = a\omy$ and $\omy$ is the mean angular frequency of the Earth's orbit ($2\pi$ divided by the time between two successive vernal equinoxes). For a derivation of the above formulae, see \ref{kepler}. $\phi$ is the angle between the Earth-sun vector $s$ at perihelion and $s$ at an arbitrary time $t$. We assume that $e$ is constant, when in fact it varies slightly with a period of $\sim 10^5$ years -- by allowing $e$ to become a function of time we could model this behaviour. In addition, we are free to choose orbital parameters corresponding to any planet in the solar system, but here we focus on the Earth. The ellipse of the Earth's orbit is rotated by an angle $\rho$ relative to the $\{e_i\}$ frame which is aligned with the equinoxes and solstices (at present $\rho \sim 12.25^\circ$) and perihelion is closest to $-e_1$. The angle $\sigma$ is therefore related to $\phi$ by
+where $\omega = a\omy$ and $\omy$ is the mean angular frequency of the Earth's orbit ($2\pi$ divided by the time between two successive vernal equinoxes). For a derivation of the above formulae, see Appendix \ref{kepler}. $\phi$ is the angle between the Earth-sun vector $s$ at perihelion and $s$ at an arbitrary time $t$. We assume that $e$ is constant, when in fact it varies slightly with a period of $\sim 10^5$ years -- by allowing $e$ to become a function of time we could model this behaviour. In addition, we are free to choose orbital parameters corresponding to any planet in the solar system, but here we focus on the Earth. The ellipse of the Earth's orbit is rotated by an angle $\rho$ relative to the $\{e_i\}$ frame which is aligned with the equinoxes and solstices (at present $\rho \sim 12.25^\circ$) and perihelion is closest to $-e_1$. The angle $\sigma$ is therefore related to $\phi$ by
 %
 \begin{equation}
 \sigma = \rho + \pi + \phi.
