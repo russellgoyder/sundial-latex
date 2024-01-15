@@ -7,6 +7,8 @@ Latest version of a paper [originally published](https://iopscience.iop.org/arti
 
 Download PDF: [The sundial problem from a new angle - Russell Goyder.pdf](<The sundial problem from a new angle - Russell Goyder.pdf>)
 
+View [Jupyter notebook with the calculations](https://russellgoyder.github.io/sundial)
+
 [LaTeX source and figures in GitHub](https://github.com/russellgoyder/sundial-latex)
 
 Dusted off and presented in [part 1](https://youtu.be/gO77fMRwn5E) and [part 2](https://youtu.be/w6-A_uJp15M) of a [metauni seminar](https://metauni.org/anythingatall/).
