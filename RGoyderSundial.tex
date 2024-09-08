@@ -269,12 +269,12 @@ This leaves enough generality to cover the common types of sundial. In particula
 where $M^2 = -1$ and $\Xi$, the angle between the direction of sun rays $s$ and the gnomon $g$, is given by
 %
 \begin{eqnarray}
-\cos\Xi & = s\cdot g = & -\cos\sigma(\sin\alpha\cos(\iota-\theta) + \cos\psi\cos\alpha\sin(\iota-\theta)) \\ \nn
-        && - \sin\sigma\sin\psi\sin(\iota-\theta)
+\cos\Xi & = s\cdot g = & \sin(\iota-\theta)(\cos\sigma\cos\psi\cos\alpha - \sin\sigma\sin\psi) \\ \nn
+        && - \cos(\iota-\theta)\cos\sigma\sin\alpha
 \end{eqnarray}
 %
 This gives the magnitude of the bivector $S$ via $S^2 = (s\cdot g)^2 - s^2 g^2 = -\sin^2\Xi$. Evaluating (\ref{cosmu}) gives
-\begin{equation}
+\begin{equation} \label{cosHourAngle}
   \cos\mu = \frac{(\sin\psi\sin\sigma+\cos\alpha\cos\psi\cos\sigma)\cos(\iota-\theta)-\sin\alpha\cos\sigma\sin(\iota-\theta)}{\sin\Xi}
 \end{equation}  
 %
@@ -348,6 +348,24 @@ Projecting $w$ onto the frame of (\ref{mFrame}) (as in (\ref{cartCoordsShad})) g
 \frac{x}{L} & = &  \frac{1}{\sin\Psi} (\cos\mu\cos d - \sin\mu\cos\iota\sin d)\\ \nn
 \frac{y}{L} & = & \frac{-1}{\sin\Psi} (\sin\mu[\sin\iota\sin i + \cos\iota\cos i\cos d] + \cos\mu\cos i\sin d)\\ \nn
 \frac{z}{L} & = & 0.
+\end{eqnarray}
+%
+Substituting for $L$ using \ref{L} and eliminating the hour angle $\mu$ using \ref{cosHourAngle}, we arrive at the following expanded forms for $x$ and $y$.
+\begin{eqnarray} \label{shadTipCartCoordsExpanded}
+  x & = & \bigg[ (\cos(d)\cos(\iota - \theta)\tan(\sigma) - \sin(d)\cos(\alpha)\cos(\iota))\sin(\psi)\\ \nn
+    &   & + (\sin(d)\cos(\iota)\tan(\sigma) + \cos(\alpha)\cos(d)\cos(\iota - \theta))\cos(\psi)\nn \\ \nn
+    &   & - \sin(\alpha)\sin(\iota - \theta)\cos(d) \bigg] \frac{1}{D}\\ \nn
+  y & = & \bigg[ [(\sin(i)\sin(\iota) + \cos(d)\cos(i)\cos(\iota))\tan(\sigma) - \sin(d)\cos(\alpha)\cos(i)\cos(\iota - \theta)]\cos(\psi)\\ \nn
+    &   & - [\sin(d)\cos(i)\cos(\iota - \theta)\tan(\sigma) + \sin(i)\sin(\iota)\cos(\alpha) + \cos(\alpha)\cos(d)\cos(i)\cos(\iota)]\sin(\psi)\\ \nn
+    &   & + \sin(\alpha)\sin(\iota - \theta)\sin(d)\cos(i) \bigg] \frac{1}{D}
+  \end{eqnarray}
+%
+where
+%
+\begin{eqnarray} \label{shadTipCartCoordsDenomExpanded}
+  D & = & -(\sin(\psi)\cos(\alpha) - \cos(\psi)\tan(\sigma))\sin(d)\sin(i)\\ \nn
+    &   & + (\sin(i)\cos(\theta)\cos(d) - \cos(i)\sin(\theta)) (\cos(\psi)\cos(\alpha) + \sin(\psi)\tan(\sigma))\\ \nn
+    &   & + (\sin(i)\sin(\theta)\cos(d) + \cos(i)\cos(\theta))\sin(\alpha)
 \end{eqnarray}
 %
 Finally, let us perform a useful consistency check. We have two ways of finding the angle $\beta$ between $g$ and $w$. One is to use the triangle defined by $g$, $w$ and $\lambda\,s$ and the other is to form the inner product $g \dt \what$. The former entails using the sine rule to evaluate
@@ -616,7 +634,7 @@ In Section~\ref{eot} we introduced (\ref{keplerCoords}) for the azimuthal coordi
 x = U e_1 U^\dag
 \end{equation}
 %
-and where $x$ is the position vector of the Earth's centre of mass relative to that of the orbit's focus. $U$ possesses only even grade elements which, in $3-d$, means that it is a scalar plus bivector. The bivector encodes the plane of the orbit. $U$ should therefore remind us of a complex number and the above form is reminiscent of the exponential form of a complex number ($x = re^{i\theta}$) which rotates the number 1 in the complex plane by $\theta$ and dilates by $r$. However, it is only when the complex number is split into two and the double-sided rotation law in (\ref{spinorx}) is used that we get a form that generalizes to $n$ dimensions.
+and where $x$ is the position vector of the Earth's centre of mass relative to that of the orbit's focus. $U$ possesses only even grade elements which, in 3-$d$, means that it is a scalar plus bivector. The bivector encodes the plane of the orbit. $U$ should therefore remind us of a complex number and the above form is reminiscent of the exponential form of a complex number ($x = re^{i\theta}$) which rotates the number 1 in the complex plane by $\theta$ and dilates by $r$. However, it is only when the complex number is split into two and the double-sided rotation law in (\ref{spinorx}) is used that we get a form that generalizes to $n$ dimensions.
 
 Differentiating with respect to time and using the parameter $\tau$ where
 %
