@@ -5,13 +5,25 @@ Latest version of a paper [originally published](https://iopscience.iop.org/arti
   <img src="figs/ArbitraryDial.png" height="250" /> 
 </p>
 
-Download PDF: [The sundial problem from a new angle - Russell Goyder.pdf](<The sundial problem from a new angle - Russell Goyder.pdf>)
+## Download PDF
 
-View [Jupyter notebook with the calculations](https://russellgoyder.github.io/sundial)
+[The sundial problem from a new angle - Russell Goyder.pdf](<The sundial problem from a new angle - Russell Goyder.pdf>)
 
-[LaTeX source and figures in GitHub](https://github.com/russellgoyder/sundial-latex)
+## Jupyter Notebook
+
+View and run a [Jupyter notebook with the calculations](https://russellgoyder.github.io/sundial/sundial)
+
+## Analemma Python Package
+
+Install a [Python package](https://russellgoyder.github.io/sundial) implementing the results for geometry, orbits and plotting the analemma.
+
+## Presentations
 
 Dusted off and presented in [part 1](https://youtu.be/gO77fMRwn5E) and [part 2](https://youtu.be/w6-A_uJp15M) of a [metauni seminar](https://metauni.org/anythingatall/).
+
+## LaTeX Source
+
+[LaTeX source and figures in GitHub](https://github.com/russellgoyder/sundial-latex)
 
 ### Building from LaTeX source
 
