@@ -16,7 +16,7 @@
   <p><em>They deciphered my analemma!</em></p>
 </div>
 <div class="source-text">
-  <p>- Saunt Orolo in <em>Anathem</em> by Neal Stephenson (2008)</p>
+  <p>- Fraa Orolo in <em>Anathem</em> by Neal Stephenson (2008)</p>
 </div>
 <br>
 
