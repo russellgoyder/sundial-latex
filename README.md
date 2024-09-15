@@ -28,10 +28,10 @@ pip install analemma
 
 |  |  |
 | ------: | --------- |
-| Documentation | https://analemma.readthedocs.io/en/stable/ |
-| PyPI | https://pypi.org/project/analemma/ |
-| Source | https://github.com/russellgoyder/sundial |
-| Issue Tracker | https://github.com/russellgoyder/sundial/issues |
+| Documentation | [https://analemma.readthedocs.io/en/stable/](https://analemma.readthedocs.io/en/stable/) |
+| PyPI | [https://pypi.org/project/analemma/](https://pypi.org/project/analemma/) |
+| Source | [https://github.com/russellgoyder/sundial](https://github.com/russellgoyder/sundial) |
+| Issue Tracker | [https://github.com/russellgoyder/sundial/issues](https://github.com/russellgoyder/sundial/issues) |
 
 <p float="left">
   <img src="figs/MainArena.png" height="250"/>
