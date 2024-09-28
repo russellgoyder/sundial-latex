@@ -1,5 +1,10 @@
 
 <style>
+  .center {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  }
   .quote-text {
       text-align: center;
       margin: 0 auto;
@@ -11,6 +16,9 @@
     font-size: 0.9em;
   }
 </style>
+
+<img src="analemma_logo_dark_mode_red.svg" height="200" class="center"/>
+
 
 <div class="quote-text">
   <p><em>They deciphered my analemma!</em></p>
