@@ -345,27 +345,9 @@ L = \frac{\sin\Xi\sin\Psi}{D}.
 Projecting $w$ onto the frame of (\ref{mFrame}) (as in (\ref{cartCoordsShad})) gives the Cartesian coordinates of the tip of the shadow
 %
 \begin{eqnarray} \label{shadTipCartCoords}
-\frac{x}{L} & = &  \frac{1}{\sin\Psi} (\cos\mu\cos d - \sin\mu\cos\iota\sin d)\\ \nn
-\frac{y}{L} & = & \frac{-1}{\sin\Psi} (\sin\mu[\sin\iota\sin i + \cos\iota\cos i\cos d] + \cos\mu\cos i\sin d)\\ \nn
-\frac{z}{L} & = & 0.
-\end{eqnarray}
-%
-Substituting for $L$ using \ref{L} and eliminating the hour angle $\mu$ using \ref{cosHourAngle}, we arrive at the following expanded forms for $x$ and $y$.
-\begin{eqnarray} \label{shadTipCartCoordsExpanded}
-  x & = & \bigg[ (\cos(d)\cos(\iota - \theta)\tan(\sigma) - \sin(d)\cos(\alpha)\cos(\iota))\sin(\psi)\\ \nn
-    &   & + (\sin(d)\cos(\iota)\tan(\sigma) + \cos(\alpha)\cos(d)\cos(\iota - \theta))\cos(\psi)\nn \\ \nn
-    &   & - \sin(\alpha)\sin(\iota - \theta)\cos(d) \bigg] \frac{1}{D}\\ \nn
-  y & = & \bigg[ [(\sin(i)\sin(\iota) + \cos(d)\cos(i)\cos(\iota))\tan(\sigma) - \sin(d)\cos(\alpha)\cos(i)\cos(\iota - \theta)]\cos(\psi)\\ \nn
-    &   & - [\sin(d)\cos(i)\cos(\iota - \theta)\tan(\sigma) + \sin(i)\sin(\iota)\cos(\alpha) + \cos(\alpha)\cos(d)\cos(i)\cos(\iota)]\sin(\psi)\\ \nn
-    &   & + \sin(\alpha)\sin(\iota - \theta)\sin(d)\cos(i) \bigg] \frac{1}{D}
-  \end{eqnarray}
-%
-where
-%
-\begin{eqnarray} \label{shadTipCartCoordsDenomExpanded}
-  D & = & -(\sin(\psi)\cos(\alpha) - \cos(\psi)\tan(\sigma))\sin(d)\sin(i)\\ \nn
-    &   & + (\sin(i)\cos(\theta)\cos(d) - \cos(i)\sin(\theta)) (\cos(\psi)\cos(\alpha) + \sin(\psi)\tan(\sigma))\\ \nn
-    &   & + (\sin(i)\sin(\theta)\cos(d) + \cos(i)\cos(\theta))\sin(\alpha)
+x & = &  \frac{\sin(\Xi)}{D} (\cos\mu\cos d - \sin\mu\cos\iota\sin d)\\ \nn
+y & = & \frac{-\sin(\Xi)}{D} (\sin\mu[\sin\iota\sin i + \cos\iota\cos i\cos d] + \cos\mu\cos i\sin d)\\ \nn
+z & = & 0.
 \end{eqnarray}
 %
 Finally, let us perform a useful consistency check. We have two ways of finding the angle $\beta$ between $g$ and $w$. One is to use the triangle defined by $g$, $w$ and $\lambda\,s$ and the other is to form the inner product $g \dt \what$. The former entails using the sine rule to evaluate
@@ -463,7 +445,7 @@ Figure~\ref{EOT} shows $\Delta_\mu = \mu - \mu_m$ as given by Equations~\ref{tru
 \end{figure}
 %
 % ----------------------------------------------------------------- %
-\section{Example paths of the shadow tip} \label{secPaths}
+\section{Example analemmas} \label{secPaths}
 %
 The results of Section~\ref{eot} have provided us with a means of plotting the shadow tip's locus at any point in time. In this section we will plot this path for some different dial geometries and locations. Throughout, we will consider a dial on Earth for which $\alpha = 23.5^\circ$. In Figure~\ref{horizDial} we have a horizontal dial where the inclination and declination are both zero ($i = d = 0$) and where the gnomon is a style with $\iota = \theta$. Distances are shown in units of the length of the style whose base is shown by a small circle at the origin of the coordinate system and an embedded compass indicates orientation. The compass diagram results from a vertical projection of a horizontal compass onto the dial face.
 %
