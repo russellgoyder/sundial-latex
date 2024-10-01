@@ -58,9 +58,9 @@ The analemma is derived from first principles in [The sundial problem from a new
 
 You can view and run Jupyter notebooks which reproduce all derivations and calculations in the article using symbolic algebra.
 
- * [Sundial geometric and analemma derivation](https://analemma.readthedocs.io/en/stable/sundial/)
- * [Orbit dynamics and the Equation of Time](https://analemma.readthedocs.io/en/stable/equation_of_time/)
- * [Example analemma plots](https://analemma.readthedocs.io/en/stable/sundial_plots/)
+ * [Sundial geometry and analemma derivation](https://analemma.readthedocs.io/en/stable/nb/analemma/)
+ * [Orbit dynamics and the Equation of Time](https://analemma.readthedocs.io/en/stable/nb/equation_of_time/)
+ * [Example analemma plots](https://analemma.readthedocs.io/en/stable/nb/sundial_plots/)
 
 I used geometric algebra for this work and have a [cheat sheet](https://russellgoyder.github.io/geometric-algebra-cheat-sheet/) which could you useful if you familiar with the topic.
 
