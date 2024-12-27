@@ -40,6 +40,7 @@ pip install analemma
 | Documentation | [https://analemma.readthedocs.io/en/stable/](https://analemma.readthedocs.io/en/stable/) |
 | Source | [https://github.com/russellgoyder/sundial](https://github.com/russellgoyder/sundial) |
 | Issue Tracker | [https://github.com/russellgoyder/sundial/issues](https://github.com/russellgoyder/sundial/issues) |
+| Discussions | [https://github.com/russellgoyder/sundial/discussions](https://github.com/russellgoyder/sundial/discussions) |
 
 <p float="left">
   <img src="figs/MainArena.png" height="250"/>
