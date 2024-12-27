@@ -49,7 +49,7 @@ pip install analemma
 
 ## Resources
 
-The `analemma` package implements the mathematics of sundial and orbits for an arbitrary sundial geometry and orientation placed anywhere on any planet. The analemma expressed in an exact parametric expression which reduces to standard results for the special cases of common dial types. Despite sundials being thousands of years old, I cannot find an expression for the analemma as general as this in the literature.
+The `analemma` package implements the mathematics of sundial and orbits for an arbitrary sundial geometry and orientation placed anywhere on any planet. The analemma expressed in an exact parametric expression which reduces to standard results for the special cases of common dial types. Despite sundials being thousands of years old, I cannot find an expression for the analemma quite as general as this in the literature.
 
 ### Reference Article
 
@@ -59,9 +59,11 @@ The analemma is derived from first principles in [The sundial problem from a new
 
 You can view and run Jupyter notebooks which reproduce all derivations and calculations in the article using symbolic algebra.
 
- * [Sundial geometry and analemma derivation](https://analemma.readthedocs.io/en/stable/nb/analemma/)
- * [Orbit dynamics and the Equation of Time](https://analemma.readthedocs.io/en/stable/nb/equation_of_time/)
- * [Example analemma plots](https://analemma.readthedocs.io/en/stable/nb/sundial_plots/)
+ * [Sundial geometry and analemma derivation](https://analemma.readthedocs.io/en/stable/#the-mathematics-of-sundials-and-the-analemma)
+ * [Example plots of the analemma](https://analemma.readthedocs.io/en/stable/nb/sundial_plots/)
+ * [The Equation of Time](https://analemma.readthedocs.io/en/stable/nb/equation_of_time/)
+ * [Orbits](https://analemma.readthedocs.io/en/stable/nb/orbit_analysis/)
+
 
 I used geometric algebra for this work and have a [cheat sheet](https://russellgoyder.github.io/geometric-algebra-cheat-sheet/) which could you useful if you familiar with the topic.
 
